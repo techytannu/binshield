@@ -97,13 +97,14 @@ Traditional malware analysis tools often require file execution, which can be da
 git clone https://github.com/techytannu/binshield.git
 cd binshield
 npm install
+```
 
 ## ▶️ Run Locally
 
 ```bash
 npm run dev
 
-
+```
 ## ⚠️ Disclaimer
 
 **BinShield** is a static analysis tool based on binary visualization and entropy analysis.  
