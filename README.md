@@ -97,3 +97,46 @@ Traditional malware analysis tools often require file execution, which can be da
 git clone https://github.com/techytannu/binshield.git
 cd binshield
 npm install
+
+## ▶️ Run Locally
+
+```bash
+npm run dev
+
+
+## ⚠️ Disclaimer
+
+**BinShield** is a static analysis tool based on binary visualization and entropy analysis.  
+It does **not guarantee detection of all malware**.
+
+For comprehensive security analysis, use professional antivirus or sandboxing solutions.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+- Fork the repository  
+- Create a new branch  
+- Commit your changes  
+- Open a Pull Request  
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👤 Author
+
+**Tanu Kumari**  
+B.Tech (Information Technology)  
+Government College of Engineering & Ceramic Technology  
+
+---
+
+⭐ If you like this project, please consider giving it a star!
+
