@@ -75,10 +75,10 @@ Traditional malware analysis tools often require file execution, which can be da
 ![Upload Screen](upload.jpeg)
 
 ### 🔹 Binary Visualization & Risk Detection
-![Binary Visualization](analysis.jpeg)
+![Binary Visualization](visualization.jpeg)
 
 ### 🔹 File Metadata & Hash Information
-![File Metadata](metadata.jpeg)
+![File Metadata](results.jpeg)
 
 ---
 
