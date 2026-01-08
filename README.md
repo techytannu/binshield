@@ -1,73 +1,99 @@
 # 🛡️ BinShield
 
-**BinShield** is a **static binary malware analysis tool** that analyzes files **without executing them**.  
-It converts binary data into grayscale visualizations and detects suspicious patterns using entropy analysis and pattern matching.
+**BinShield** is a **static binary malware analyzer** that allows users to analyze files **without executing them**.  
+It visualizes binary data as grayscale images and detects suspicious patterns using entropy analysis and static heuristics.
 
-> ⚠️ BinShield focuses on **safe, static analysis** and does **not run or execute uploaded files**.
-
----
-
-## 🔍 What BinShield Does
-
-- Converts any file into a **binary grayscale image**
-- Detects **high-entropy regions** (encrypted or packed data)
-- Flags **suspicious binary patterns**
-- Calculates **SHA-256 hash**
-- Provides **risk assessment** (Low / Medium / High)
-- Works entirely in **static analysis mode**
+> 🔒 Safe-by-design: Files are never executed.
 
 ---
 
-## ✨ Key Features
+## 🚀 Live Demo
 
-### 📁 File Analysis
-- Supports any file type (PDF, EXE, etc.)
-- Displays file metadata:
-  - File name
-  - Type
-  - Size
-  - Last modified date
-  - SHA-256 hash
+🔗 https://binshield.lovable.app/
+
+---
+
+## 🧠 Why BinShield?
+
+Traditional malware analysis tools often require file execution, which can be dangerous.  
+**BinShield eliminates this risk** by performing **pure static analysis**, making it ideal for:
+- Security learners
+- Malware researchers
+- Hackathon demos
+- Safe file inspection
+
+---
+
+## ✨ Features
+
+### 📤 File Upload & Static Analysis
+- Upload **any file type** (PDF, EXE, ZIP, etc.)
+- No execution — analysis is fully static
+- Secure analysis mode enabled by default
 
 ### 🖼️ Binary Visualization
-- Each pixel represents **one byte**
-- Brightness = byte value (0–255)
-- Uniform regions may indicate padding or null bytes
-- High-noise regions may indicate encryption or compression
+- Converts binary data into a **grayscale image**
+- Each pixel represents **1 byte**
+- Brightness corresponds to byte value (0–255)
+- Helps visually identify packed or encrypted regions
 
-### 📊 Entropy Analysis
-- Entropy score (0–8)
-- High entropy suggests:
+### 📊 Entropy Detection
+- Calculates entropy score (0–8)
+- High entropy indicates:
   - Encrypted content
-  - Packed binaries
-  - Obfuscated malware
+  - Compressed binaries
+  - Possible obfuscation
 
-### 🚨 Risk Detection
-- Highlights suspicious regions
-- Shows total suspicious segments detected
-- Displays overall **risk level**
-  - 🟥 High Risk
-  - 🟨 Medium Risk
-  - 🟩 Low Risk
+### 🚨 Risk Assessment
+- Detects suspicious binary regions
+- Flags files as **Low / Medium / High Risk**
+- Displays number of suspicious segments detected
+
+### 📁 File Metadata
+- File name
+- File type
+- File size
+- Last modified date
+- SHA-256 hash
 
 ---
 
 ## 🧪 How It Works
 
 1. User uploads a file
-2. File is converted into raw binary
+2. File is converted into raw binary data
 3. Binary bytes are mapped to a grayscale image
-4. Entropy is calculated over binary segments
-5. Pattern matching detects suspicious regions
-6. A risk score is generated — **without executing the file**
+4. Entropy is calculated across binary sections
+5. Suspicious patterns are detected
+6. Risk level is generated — **without executing the file**
 
 ---
 
 ## 🖥️ Screenshots
 
-> Add these images to a `screenshots/` folder in your repo
+### 🔹 Upload & Static Analysis Mode
+![Upload Screen](upload.jpeg)
 
-```markdown
-![Upload Screen](screenshots/upload.png)
-![Binary Visualization](screenshots/visualization.png)
-![Analysis Results](screenshots/results.png)
+### 🔹 Binary Visualization & Risk Detection
+![Binary Visualization](analysis.jpeg)
+
+### 🔹 File Metadata & Hash Information
+![File Metadata](metadata.jpeg)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React (Lovable)
+- **Styling:** Tailwind CSS
+- **Analysis:** JavaScript-based static analysis
+- **Security:** Client-side binary processing
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/techytannu/binshield.git
+cd binshield
+npm install
