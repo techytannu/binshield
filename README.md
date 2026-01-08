@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
+# 🛡️ BinShield
 
-## Project info
+**BinShield** is a **static binary malware analysis tool** that analyzes files **without executing them**.  
+It converts binary data into grayscale visualizations and detects suspicious patterns using entropy analysis and pattern matching.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+> ⚠️ BinShield focuses on **safe, static analysis** and does **not run or execute uploaded files**.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🔍 What BinShield Does
 
-**Use Lovable**
+- Converts any file into a **binary grayscale image**
+- Detects **high-entropy regions** (encrypted or packed data)
+- Flags **suspicious binary patterns**
+- Calculates **SHA-256 hash**
+- Provides **risk assessment** (Low / Medium / High)
+- Works entirely in **static analysis mode**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## ✨ Key Features
 
-**Use your preferred IDE**
+### 📁 File Analysis
+- Supports any file type (PDF, EXE, etc.)
+- Displays file metadata:
+  - File name
+  - Type
+  - Size
+  - Last modified date
+  - SHA-256 hash
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 🖼️ Binary Visualization
+- Each pixel represents **one byte**
+- Brightness = byte value (0–255)
+- Uniform regions may indicate padding or null bytes
+- High-noise regions may indicate encryption or compression
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 📊 Entropy Analysis
+- Entropy score (0–8)
+- High entropy suggests:
+  - Encrypted content
+  - Packed binaries
+  - Obfuscated malware
 
-Follow these steps:
+### 🚨 Risk Detection
+- Highlights suspicious regions
+- Shows total suspicious segments detected
+- Displays overall **risk level**
+  - 🟥 High Risk
+  - 🟨 Medium Risk
+  - 🟩 Low Risk
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🧪 How It Works
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. User uploads a file
+2. File is converted into raw binary
+3. Binary bytes are mapped to a grayscale image
+4. Entropy is calculated over binary segments
+5. Pattern matching detects suspicious regions
+6. A risk score is generated — **without executing the file**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 🖥️ Screenshots
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+> Add these images to a `screenshots/` folder in your repo
 
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+```markdown
+![Upload Screen](screenshots/upload.png)
+![Binary Visualization](screenshots/visualization.png)
+![Analysis Results](screenshots/results.png)
